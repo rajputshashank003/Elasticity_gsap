@@ -14,24 +14,24 @@ const HorizontalScrollText = () => {
 
     useGSAP(() => {
         gsap.to(".horibox_par .horibox", {
-            transform : `translateX(${ sm ? "-650%" : "-150%"})`,
+            transform : `translateX(${ sm ? "-720%" : "-150%"})`,
             scrollTrigger: {
                 trigger: ".horibox_par",   
                 scroller :"body",
                 start: "top 0%",
                 end : "top -120%",
-                scrub: 3,           
+                scrub: 4,           
                 pin : true,
             },
         });
         gsap.to(".text_div3 .engine1, .text_div7 .engine1", {
-            x : scrollDirection ? 200 : -200,
+            x : scrollDirection ? sm ? 300 : 250 : sm ? -300 : -250,
             scrollTrigger: {
                 trigger: ".text_div3",   
                 scroller :"body",
                 start: "top 10%",
                 end : "top -90%",
-                scrub: 0,    
+                scrub: 3,    
             },
         });
     }, []);
@@ -70,11 +70,11 @@ const HorizontalScrollText = () => {
                             <span className='m-0'>{el}</span>
                             {
                                 ind == 3 && 
-                                <img className='engine1 absolute top-[60%] right-[20%]' src="/img3.png" alt="" />
+                                <img className='engine1 absolute top-[60%] max-sm:top-[50%] right-[20%]' src="/img3.png" alt="" />
                             }
                             {
                                 ind == 7 && 
-                                <img className='engine1 absolute top-[20%] right-[10%]' src="/img2.png" alt="" />
+                                <img className='engine1 absolute max-sm:top-[10%] top-[20%] max-sm:right-[90%] right-[40%]' src="/img2.png" alt="" />
                             }
                         </div>
                     ))
