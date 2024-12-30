@@ -12,7 +12,7 @@ const StartupAniation = () => {
         textArray.forEach((text) => {
             tl.to(".text-span", {
                 text: text,          
-                duration: 0.05,         
+                duration: 0.07,         
                 stagger: 0.07,
                 ease : "power3.inOut",
             });
