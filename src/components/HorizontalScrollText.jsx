@@ -14,7 +14,7 @@ const HorizontalScrollText = () => {
 
     useGSAP(() => {
         gsap.to(".horibox_par .horibox", {
-            transform : `translateX(${ sm ? "-720%" : "-150%"})`,
+            transform : `translateX(${ sm ? "-700%" : "-160%"})`,
             scrollTrigger: {
                 trigger: ".horibox_par",   
                 scroller :"body",
@@ -25,7 +25,7 @@ const HorizontalScrollText = () => {
             },
         });
         gsap.to(".text_div3 .engine1, .text_div7 .engine1", {
-            x : scrollDirection ? sm ? 300 : 250 : sm ? -300 : -250,
+            x : scrollDirection ? sm ? 300 : 200 : sm ? -300 : -200,
             scrollTrigger: {
                 trigger: ".text_div3",   
                 scroller :"body",
@@ -63,7 +63,7 @@ const HorizontalScrollText = () => {
 
     return (
         <div className="horibox_par h-screen overflow-hidden bg-[#9AC1CB]">
-            <div className='horibox pb-4 h-screen flex max-sm:text-[160vw] text-[52vw] tracking-[-2rem] text-[#151414]'>
+            <div className='horibox pb-4 h-screen flex max-sm:text-[160vw] font-semibold text-[52vw] tracking-[-2rem] text-[#151414]'>
                 {
                     "EXPERTISES".split("").map((el, ind) => (
                         <div className={`text_div${ind} relative`} key={ind} >
@@ -74,7 +74,7 @@ const HorizontalScrollText = () => {
                             }
                             {
                                 ind == 7 && 
-                                <img className='engine1 absolute max-sm:top-[10%] top-[20%] max-sm:right-[90%] right-[40%]' src="/img2.png" alt="" />
+                                <img className='engine1 absolute max-sm:top-[10%] top-[12%] max-sm:right-[90%] right-[40%]' src="/img2.png" alt="" />
                             }
                         </div>
                     ))

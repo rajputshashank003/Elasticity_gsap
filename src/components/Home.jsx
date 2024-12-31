@@ -1,6 +1,7 @@
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 import React from 'react';
+import SpringWire from './SpringWire';
 
 const Home = () => {
     useGSAP(() => {
@@ -21,6 +22,7 @@ const Home = () => {
     }, []);
 
     return (
+        <>
         <div className='home_main z-[999] relative min-h-screen text-[#F3C77C] bg-[#151414] w-full flex flex-col justify-center items-center tracking-[-3vw] text-[40vw] font-bold'>
             <div className="hello_text flex justify-center md:h-screen relative scale-y-125 font-helvetica text-[40vw] mb-[2rem] md:top-[5rem] font-extrabold">
                 <span className='txt inline-block h-fit'>h</span>
@@ -33,6 +35,8 @@ const Home = () => {
                 hello how are <br/> you all
             </div>
         </div>
+        <SpringWire/>
+        </>
     );
 };
 

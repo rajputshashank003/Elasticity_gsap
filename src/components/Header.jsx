@@ -3,6 +3,8 @@ import gsap from 'gsap'
 import React, { useEffect, useRef, useState } from 'react'
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useScroll } from 'framer-motion';
+import { Link } from 'react-router-dom';
+import { data } from './HeaderElements';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -45,8 +47,12 @@ const Header = () => {
                 </div>
                 <div className='flex relative gap-10 max-md:gap-4'>
                     {
-                        ["Home", "Products", "Premium", "Profile"].map((el) => (
-                            <span key={el} className="header_options relative hover:underline hover:text-[#F3C77C] cursor-pointer top-[10%]">{el}</span>
+                        data.map((el, ind) => (
+                            <Link key={ind} to={el.link}>
+                                <span className="header_options relative hover:underline hover:text-[#F3C77C] cursor-pointer top-[10%]">
+                                    {el.name}
+                                </span>
+                            </Link>
                         ))
                     }
                 </div>
