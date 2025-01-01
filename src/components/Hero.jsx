@@ -6,6 +6,7 @@ import ScrollStripTrext from './ScrollStripText'
 import StartupAnimation from './StartupAnimation'
 import Footer from './Footer'
 import Header from './Header'
+import ImageHoverAnimation from './ImageHoverAnimation/ImageHoverAnimation'
 
 const Hero = () => {
   return (
@@ -19,6 +20,9 @@ const Hero = () => {
       </div>
       <div className="min-h-screen w-screen ">
         <ScrollImage/>
+      </div>
+      <div className='min-h-screen w-screen'>
+        <ImageHoverAnimation/>
       </div>
       <div className="min-h-screen ">
         <HorizontalScrollText/>
