@@ -6,12 +6,14 @@ import ScrollStripTrext from './ScrollStripText'
 import StartupAnimation from './StartupAnimation'
 import Footer from './Footer'
 import Header from './Header'
+import SlideMenu from './SlideMenu'
 import ImageHoverAnimation from './ImageHoverAnimation/ImageHoverAnimation'
 
 const Hero = () => {
   return (
-    <div className="bg-[#151414] text-white text-8xl min-h-screen overflow-hidden">
+    <div className="bg-[#151414] text-white text-8xl min-h-screen overflow-hidden relative">
       <Header/>
+      <SlideMenu/>
       <div className="bg-[#F3C77C] overflow-hidden relative">
         <div className='absolute top-0 flex justify-center margin-center h-screen w-screen'>
           <StartupAnimation/>
